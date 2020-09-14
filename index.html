@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Wispo - test</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+	<svg style="display: none;">
+		<symbol id="remove-btn">
+			<rect width="16" height="16" rx="8" fill="black" />
+			<path d="M5 5L10.9997 10.9997M5.00032 11L11 5.00032" stroke="white" stroke-width="2" />
+		</symbol>
+		<symbol id="tooltipIcon">
+			<path
+				d="M3.05169 6.56576C3.05169 6.08042 3.15903 5.67909 3.37369 5.36176C3.59769 5.04442 3.91969 4.69442 4.33969 4.31176C4.6477 4.03176 4.8717 3.79842 5.0117 3.61176C5.16103 3.41576 5.2357 3.19642 5.2357 2.95376C5.2357 2.60842 5.0957 2.33776 4.8157 2.14176C4.54503 1.93642 4.18103 1.83376 3.7237 1.83376C3.28503 1.83376 2.89303 1.92709 2.54769 2.11376C2.21169 2.29109 1.92703 2.54309 1.69369 2.86976L-0.000305176 1.87576C0.391695 1.27842 0.919028 0.816422 1.58169 0.489755C2.2537 0.163089 3.04703 -0.000244141 3.96169 -0.000244141C5.03503 -0.000244141 5.89369 0.228422 6.53769 0.685755C7.19103 1.14309 7.51769 1.77776 7.51769 2.58976C7.51769 2.97242 7.45236 3.30842 7.32169 3.59776C7.20036 3.88709 7.04636 4.13442 6.85969 4.33976C6.68236 4.53576 6.44903 4.76442 6.1597 5.02576C5.81436 5.33376 5.56236 5.59509 5.4037 5.80976C5.24503 6.01509 5.1657 6.26709 5.1657 6.56576H3.05169ZM4.11569 10.0798C3.73303 10.0798 3.41103 9.95842 3.14969 9.71576C2.8977 9.46376 2.77169 9.16042 2.77169 8.80576C2.77169 8.45109 2.8977 8.15709 3.14969 7.92376C3.4017 7.68109 3.7237 7.55976 4.11569 7.55976C4.5077 7.55976 4.82969 7.68109 5.0817 7.92376C5.3337 8.15709 5.4597 8.45109 5.4597 8.80576C5.4597 9.16042 5.32903 9.46376 5.0677 9.71576C4.81569 9.95842 4.49836 10.0798 4.11569 10.0798Z"
+				fill="#ACB8CA" />
+			<path
+				d="M3.05169 6.56576C3.05169 6.08042 3.15903 5.67909 3.37369 5.36176C3.59769 5.04442 3.91969 4.69442 4.33969 4.31176C4.6477 4.03176 4.8717 3.79842 5.0117 3.61176C5.16103 3.41576 5.2357 3.19642 5.2357 2.95376C5.2357 2.60842 5.0957 2.33776 4.8157 2.14176C4.54503 1.93642 4.18103 1.83376 3.7237 1.83376C3.28503 1.83376 2.89303 1.92709 2.54769 2.11376C2.21169 2.29109 1.92703 2.54309 1.69369 2.86976L-0.000305176 1.87576C0.391695 1.27842 0.919028 0.816422 1.58169 0.489755C2.2537 0.163089 3.04703 -0.000244141 3.96169 -0.000244141C5.03503 -0.000244141 5.89369 0.228422 6.53769 0.685755C7.19103 1.14309 7.51769 1.77776 7.51769 2.58976C7.51769 2.97242 7.45236 3.30842 7.32169 3.59776C7.20036 3.88709 7.04636 4.13442 6.85969 4.33976C6.68236 4.53576 6.44903 4.76442 6.1597 5.02576C5.81436 5.33376 5.56236 5.59509 5.4037 5.80976C5.24503 6.01509 5.1657 6.26709 5.1657 6.56576H3.05169ZM4.11569 10.0798C3.73303 10.0798 3.41103 9.95842 3.14969 9.71576C2.8977 9.46376 2.77169 9.16042 2.77169 8.80576C2.77169 8.45109 2.8977 8.15709 3.14969 7.92376C3.4017 7.68109 3.7237 7.55976 4.11569 7.55976C4.5077 7.55976 4.82969 7.68109 5.0817 7.92376C5.3337 8.15709 5.4597 8.45109 5.4597 8.80576C5.4597 9.16042 5.32903 9.46376 5.0677 9.71576C4.81569 9.95842 4.49836 10.0798 4.11569 10.0798Z"
+				fill="#909EB7" />
+			<path
+				d="M3.05169 6.56576C3.05169 6.08042 3.15903 5.67909 3.37369 5.36176C3.59769 5.04442 3.91969 4.69442 4.33969 4.31176C4.6477 4.03176 4.8717 3.79842 5.0117 3.61176C5.16103 3.41576 5.2357 3.19642 5.2357 2.95376C5.2357 2.60842 5.0957 2.33776 4.8157 2.14176C4.54503 1.93642 4.18103 1.83376 3.7237 1.83376C3.28503 1.83376 2.89303 1.92709 2.54769 2.11376C2.21169 2.29109 1.92703 2.54309 1.69369 2.86976L-0.000305176 1.87576C0.391695 1.27842 0.919028 0.816422 1.58169 0.489755C2.2537 0.163089 3.04703 -0.000244141 3.96169 -0.000244141C5.03503 -0.000244141 5.89369 0.228422 6.53769 0.685755C7.19103 1.14309 7.51769 1.77776 7.51769 2.58976C7.51769 2.97242 7.45236 3.30842 7.32169 3.59776C7.20036 3.88709 7.04636 4.13442 6.85969 4.33976C6.68236 4.53576 6.44903 4.76442 6.1597 5.02576C5.81436 5.33376 5.56236 5.59509 5.4037 5.80976C5.24503 6.01509 5.1657 6.26709 5.1657 6.56576H3.05169ZM4.11569 10.0798C3.73303 10.0798 3.41103 9.95842 3.14969 9.71576C2.8977 9.46376 2.77169 9.16042 2.77169 8.80576C2.77169 8.45109 2.8977 8.15709 3.14969 7.92376C3.4017 7.68109 3.7237 7.55976 4.11569 7.55976C4.5077 7.55976 4.82969 7.68109 5.0817 7.92376C5.3337 8.15709 5.4597 8.45109 5.4597 8.80576C5.4597 9.16042 5.32903 9.46376 5.0677 9.71576C4.81569 9.95842 4.49836 10.0798 4.11569 10.0798Z"
+				fill="#9A9A9A" />
+		</symbol>
+		<symbol id="arrowBack">
+			<path d="M7 12.5L2 7L7 1.5" stroke="white" stroke-width="2" />
+		</symbol>
+	</svg>
+	<section class="compare">
+		<div class="compare__header">
+			<div class="compare__container container">
+				<ul class="compare__braedcrumps braedcrumps-list">
+					<li class="braedcrumps-list__item">
+						<a href="#" class="braedcrumps-list__item-link">Главная</a>
+					</li>
+					<li class="braedcrumps-list__item">
+						<a class="braedcrumps-list__item-link braedcrumps-list__item-link--active">Сравнение товаров</a>
+					</li>
+				</ul>
+				<h1 class="compare__title">Сравнение товаров</h1>
+			</div>
+		</div>
+		<div class="compare__content compare-content">
+			<form action="#" method="POST" class="compare-content__container container">
+				<div class="compare-content__top">
+					<div class="compare-content__columnn filter-column">
+						<p class="compare-content__text">Для категорий</p>
+						<div class="compare-content__tooltip tooltip">
+							<button type="button" class="tooltip__btn tooltip__btn--category">
+								<svg width="8" height="11" viewBox="0 0 8 11" fill="none">
+									<use xlink:href="#tooltipIcon"></use>
+								</svg>
+							</button>
+							<div class="tooltip__body tooltip__body--category">
+								<p class="tooltip__text">Всплывающая подсказка</p>
+							</div>
+						</div>
+						<div class="compare__select-body">
+							<select class="compare__select" name="category" id="category">
+								<option value="smartphone">Смартфоны</option>
+								<option value="tablet">Планшеты</option>
+							</select>
+						</div>
+						<div class="compare__filter">
+							<input class="form__input-radio" type="radio" name="filter" value="all-property" id="all-property"
+								checked>
+							<label class="form__label-radio" for="all-property">Все характеристики</label>
+							<input class="form__input-radio" type="radio" name="filter" value="differences" id="differences">
+							<label class="form__label-radio" for="differences">Показать только различия</label>
+						</div>
+					</div>
+					<div class="compare-content__columnn">
+						<div class="compare-content__item compare-item">
+							<img class="compare-item__img" src="img/iphone11.jpg" alt="телефон iphone" width="120" height="147">
+							<a href="#" class="compare-item__smartphone-link">Смартфоны</a>
+							<h2 class="compare-item__heading">Apple iPhone 11 64 Gb (Gold)</h2>
+							<div class="compare-item__price-box">
+								<p class="compare-item__price">49 999 ₽</p>
+								<p class="compare-item__price-old">60 999 ₽</p>
+							</div>
+							<div class="compare-item__footer">
+								<button class="compare-item__add-cart-btn" type="button">В корзину</button>
+								<a href="#" class="compare-item__by-click">Купить в 1 клик</a>
+							</div>
+							<button type="button" class="compare-item__remove-btn" aria-label="удалить из сравнения">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<use xlink:href="#remove-btn"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="compare-content__columnn">
+						<div class="compare-content__item compare-item">
+							<img class="compare-item__img" src="img/xiaomi.jpg" alt="телефон xiaomi" width="130" height="147">
+							<a href="#" class="compare-item__smartphone-link">Смартфоны</a>
+							<h2 class="compare-item__heading">Apple iPhone 11 64 Gb (Gold)</h2>
+							<div class="compare-item__price-box">
+								<p class="compare-item__price">49 999 ₽</p>
+								<p class="compare-item__price-old">60 999 ₽</p>
+							</div>
+							<div class="compare-item__footer">
+								<button class="compare-item__add-cart-btn" type="button">В корзину</button>
+								<a href="#" class="compare-item__by-click">Купить в 1 клик</a>
+							</div>
+							<button type="button" class="compare-item__remove-btn" aria-label="удалить из сравнения">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<use xlink:href="#remove-btn"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="compare-content__row">
+					<ul class="compare-content__list compare-list">
+						<li class="compare-list__property compare-list__property--grid">
+							<h3 class="compare-list__property-name">Бонусные рубли</h3>
+							<p class="compare-list__property-value compare-list__property-value--bold">ББ + 2 000 бонусов</p>
+							<p class="compare-list__property-value compare-list__property-value--bold">ББ + 1 000 бонусов</p>
+						</li>
+						<li class="compare-list__property compare-list__property--grid">
+							<h3 class="compare-list__property-name">Акции и специальные предложения</h3>
+							<p class="compare-list__property-value">Рассрочка</p>
+							<p class="compare-list__property-value">Скидка 50% на наушники</p>
+						</li>
+						<li class="compare-list__property compare-list__property--grid">
+							<h3 class="compare-list__property-name">Наличие</h3>
+							<p class="compare-list__property-value">В наличии</p>
+							<p class="compare-list__property-value">От 3 до 5 дней</p>
+						</li>
+						<li class="compare-list__property">
+							<h3 class="compare-list__property-name">Основные</h3>
+							<ul class="compare-sub-list">
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Операционная система</h4>
+									<p class="compare-list__property-value">iOS 13</p>
+									<p class="compare-list__property-value">Android</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Цвет</h4>
+									<p class="compare-list__property-value">золотой</p>
+									<p class="compare-list__property-value">черный</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Год выпуска</h4>
+									<p class="compare-list__property-value">2019</p>
+									<p class="compare-list__property-value">2019</p>
+								</li>
+							</ul>
+						</li>
+						<li class="compare-list__property">
+							<h3 class="compare-list__property-name">Процессор</h3>
+							<ul class="compare-sub-list">
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Производитель</h4>
+									<p class="compare-list__property-value">Apple</p>
+									<p class="compare-list__property-value">Apple</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Тип</h4>
+									<p class="compare-list__property-value">A13 Bionic</p>
+									<p class="compare-list__property-value">A13 Bionic</p>
+								</li>
+							</ul>
+						</li>
+						<li class="compare-list__property">
+							<h3 class="compare-list__property-name">Экран</h3>
+							<ul class="compare-sub-list">
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Диагональ (дюймов)</h4>
+									<p class="compare-list__property-value">5,8</p>
+									<p class="compare-list__property-value">5,8</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Тип экрана</h4>
+									<p class="compare-list__property-value">Super Retina XDR</p>
+									<p class="compare-list__property-value">Super Retina XDR</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid">
+									<h4 class="compare-sub-list__property-name">Разрешение экрана</h4>
+									<p class="compare-list__property-value">2436×1125 точек</p>
+									<p class="compare-list__property-value">2436×1125 точек</p>
+								</li>
+							</ul>
+						</li>
+						<li class="compare-list__property">
+							<h3 class="compare-list__property-name">Камера</h3>
+							<ul class="compare-sub-list">
+								<li class="compare-sub-list__property compare-list__property--grid">
+									<h4 class="compare-sub-list__property-name">Количество основных камер</h4>
+									<p class="compare-list__property-value">3</p>
+									<p class="compare-list__property-value">3</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Разрешения основных камер</h4>
+									<p class="compare-list__property-value">12 МПикс, 12 МПикс, 12 МПикс</p>
+									<p class="compare-list__property-value">12 МПикс, 12 МПикс, 12 МПикс</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Функции основной камеры</h4>
+									<p class="compare-list__property-value">Режим «Портрет», портретное освещение, оптическая
+										стабилизация,
+										вспышка True Tone, Focus Pixels</p>
+									<p class="compare-list__property-value">Режим «Портрет», портретное освещение, оптическая
+										стабилизация,
+										вспышка True Tone, Focus Pixels</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Фронтальная камера</h4>
+									<p class="compare-list__property-value">есть</p>
+									<p class="compare-list__property-value">есть</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Разрешение фронтальной камеры</h4>
+									<p class="compare-list__property-value">12 МПикс</p>
+									<p class="compare-list__property-value">12 МПикс</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">вспышка</h4>
+									<p class="compare-list__property-value">есть, светодиодная</p>
+									<p class="compare-list__property-value">есть, светодиодная</p>
+								</li>
+							</ul>
+						</li>
+						<li class="compare-list__property">
+							<h3 class="compare-list__property-name">Память</h3>
+							<ul class="compare-sub-list">
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Встроенная память</h4>
+									<p class="compare-list__property-value">64 Гб</p>
+									<p class="compare-list__property-value">64 Гб</p>
+								</li>
+							</ul>
+						</li>
+						<li class="compare-list__property">
+							<h3 class="compare-list__property-name">Питание</h3>
+							<ul class="compare-sub-list">
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Тип разъема для зарядки</h4>
+									<p class="compare-list__property-value">Lightning</p>
+									<p class="compare-list__property-value">Lightning</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid">
+									<h4 class="compare-sub-list__property-name">Функция быстрой зарядки</h4>
+									<p class="compare-list__property-value">есть</p>
+									<p class="compare-list__property-value">есть</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid ">
+									<h4 class="compare-sub-list__property-name">Функция беспроводной зарядки</h4>
+									<p class="compare-list__property-value">есть</p>
+									<p class="compare-list__property-value">есть</p>
+								</li>
+							</ul>
+						</li>
+						<li class="compare-list__property">
+							<h3 class="compare-list__property-name">Подключение</h3>
+							<ul class="compare-sub-list">
+								<li class="compare-sub-list__property compare-list__property--grid">
+									<div class="compare-sub-list__property-wrapper">
+										<h4 class="compare-sub-list__property-name">Разъем Lightning 8 Pin</h4>
+										<div class="compare-content__tooltip tooltip">
+											<button type="button" class="tooltip__btn tooltip__btn--2">
+												<svg width="8" height="11" viewBox="0 0 8 11" fill="none">
+													<use xlink:href="#tooltipIcon"></use>
+												</svg>
+											</button>
+											<div class="tooltip__body tooltip__body--2">
+												<p class="tooltip__text"><b>4500 мАч</b> - это примерно 30 часов активного использования
+													устройства</p>
+											</div>
+										</div>
+									</div>
+									<p class="compare-list__property-value">есть</p>
+									<p class="compare-list__property-value">есть</p>
+								</li>
+								<li class="compare-sub-list__property compare-list__property--grid">
+									<h4 class="compare-sub-list__property-name">Разъем для наушников</h4>
+									<p class="compare-list__property-value">Lightning</p>
+									<p class="compare-list__property-value">Lightning</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="compare-content__row compare-footer">
+					<p class="compare-footer__text">
+						<span class="compare-item-name" id="compare-item-1">Смартфон Apple iPhone 11 64GB Black (MWLT2RU/A)</span> и
+						<span class="compare-item-name" id="compare-item-2">Смартфон Apple iPhone SE 2020 128GB Black
+							(MXD02RU/A)</span> -
+						сравнение основных характеристик моделей
+					</p>
+					<button type="submit" class="compare-footer__clear-btn">Очистить список</button>
+					<a href="#" class="compare-footer__link">
+						<svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+							<use xlink:href="#arrowBack"></use>
+						</svg>
+						<span>Назад к товарам</span>
+					</a>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<script src="js/javascript.js"></script>
+</body>
+
+</html>
